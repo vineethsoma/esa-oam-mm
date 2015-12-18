@@ -16,9 +16,10 @@ Vagrant.configure(2) do |config|
 	config.vm.define "oam" do |oam|
 	
 		oam.vm.box = "esa-oam"
+		oam.vm.box_url="http://esaserver01.cei.cox.com/vagrant/esa-oam/"
 		oam.vm.hostname="esa02.esadvisory.com"
 		oam.vm.box_check_update = false
-		oam.vm.network "public_network"
+		#oam.vm.network "public_network"
 		oam.ssh.insert_key=false
 		oam.ssh.username = 'vagrant'
 		oam.ssh.password = 'vagrant'
